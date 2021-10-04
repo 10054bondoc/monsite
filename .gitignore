@@ -2,3 +2,5 @@ references/
 node_modules/
 .env
 initialize.ps1
+startclient.ps1
+startserver.ps1
