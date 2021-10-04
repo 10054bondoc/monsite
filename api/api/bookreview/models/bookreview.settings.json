@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookreviews",
+  "info": {
+    "name": "bookreview"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "booktitle": {
+      "type": "string"
+    },
+    "review": {
+      "type": "richtext"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "bookauthor": {
+      "type": "string"
+    },
+    "cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

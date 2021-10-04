@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "workexperiences",
+  "info": {
+    "name": "workexperience"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "jobtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "year": {
+      "type": "string"
+    }
+  }
+}
