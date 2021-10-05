@@ -10,7 +10,6 @@
       class={page}
       style="opacity: {curPage === page ? '1' : '.5'};"
       on:mouseenter={(e) => {
-        console.dir(e.target);
         if (e.target.innerText !== curPage) {
           e.target.style.opacity = 0.9;
         }

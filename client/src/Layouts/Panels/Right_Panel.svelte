@@ -1,7 +1,7 @@
 <script>
   import Router, { location } from "svelte-spa-router";
-  import Blog from "../Contents/Blog.svelte";
-  import Me from "../Contents/Me.svelte";
+  import Blog from "../Right_Contents/Blog_right.svelte";
+  import Me from "../Right_Contents/Me_right.svelte";
   const routes = {
     "/": Me,
     "/blog": Blog,

@@ -12,7 +12,7 @@
   .panel {
     background-color: #dfe0df;
     width: 100%;
-    height: 95%;
+    height: 100%;
 
     display: flex;
     justify-content: center;
