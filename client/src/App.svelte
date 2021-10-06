@@ -1,7 +1,12 @@
 <script>
-  import Header from "./Layouts/Header.svelte";
-
   import Main from "./Layouts/Main.svelte";
+  import { idHeight } from "./stores";
+  import { onMount } from "svelte";
+
+  onMount(() => {
+    idHeight.update((n) => (n = window.innerHeight * 0.42));
+    console.log($idHeight);
+  });
 </script>
 
 <main>

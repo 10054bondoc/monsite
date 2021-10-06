@@ -1,6 +1,9 @@
 <script>
   import { idHeight } from "../../stores";
   import { fade } from "svelte/transition";
+
+  const navItems = ["WORKS", "SKILLS", "WORK EXPERIENCE", "ETC"];
+  $: currentNavItem = "WORKS";
 </script>
 
 <div class="me" in:fade={{ duration: 100, delay: 300 }}>
@@ -19,11 +22,39 @@
     </div>
   </div>
   <div class="socials" style="top: {$idHeight - $idHeight * 0.165}px;">
-    <ion-icon name="logo-github" title="github" />
-    <ion-icon name="logo-linkedin" title="linkedin" />
-    <ion-icon name="logo-instagram" title="instagram" />
+    <ion-icon class="socialicon" name="logo-github" title="github" />
+    <ion-icon class="socialicon" name="logo-linkedin" title="linkedin" />
+    <ion-icon class="socialicon" name="logo-instagram" title="instagram" />
   </div>
-  <div class="nav" />
+  <div class="nav">
+    <ul class="listcont">
+      {#each navItems as item}
+        <li
+          id={item}
+          style="opacity: {currentNavItem === item ? '1' : '.5'};
+          "
+          on:mouseenter={(e) => {
+            if (currentNavItem !== item) {
+              e.target.style.opacity = "1";
+            }
+          }}
+          on:mouseleave={(e) => {
+            if (currentNavItem !== item) {
+              e.target.style.opacity = ".5";
+            }
+          }}
+          on:click={() => {
+            currentNavItem = item;
+          }}
+        >
+          {item}
+          {#if currentNavItem === item}
+            <ion-icon name="caret-forward-outline" style="color: #e18050;" />
+          {/if}
+        </li>
+      {/each}
+    </ul>
+  </div>
 </div>
 
 <style>
@@ -78,7 +109,7 @@
     justify-content: flex-start;
     /* background-color: rgba(0, 255, 13, 0.404); */
   }
-  ion-icon {
+  .socialicon {
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
     transform: scale(1.25);
@@ -88,5 +119,21 @@
     align-items: center;
     opacity: 0.7;
     cursor: pointer;
+  }
+
+  .nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1rem;
+    text-align: right;
+    margin-right: 1rem;
+  }
+  .listcont > * {
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+    color: #67534a;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
   }
 </style>

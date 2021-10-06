@@ -1,5 +1,4 @@
 <script>
-  import { afterUpdate, beforeUpdate, onMount } from "svelte";
   import { location } from "svelte-spa-router";
   import BlogLeft from "../Left_contents/Blog_left.svelte";
   import MeLeft from "../Left_contents/Me_left.svelte";
@@ -19,14 +18,6 @@
     if (!imatblog) {
       idHeight.update((n) => (n = imageDiv.height));
     }
-  });
-  beforeUpdate(() => {
-    console.log("before");
-    console.log(imageDiv && imageDiv.height);
-  });
-  afterUpdate(() => {
-    console.log("after");
-    console.log(imageDiv.height);
   });
 </script>
 
