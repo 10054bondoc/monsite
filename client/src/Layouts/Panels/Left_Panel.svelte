@@ -30,7 +30,7 @@
   >
     <img
       bind:this={imageDiv}
-      src="../moidesat.jpg"
+      src="../moi2luminosity_g.jpg"
       alt="mypic"
       class="pic"
       style="top: {imatblog ? '10%' : '-10%'}; left: {imatblog
@@ -70,5 +70,6 @@
     border-radius: 50%;
 
     transition: 0.3s ease-in-out;
+    opacity: 0.95;
   }
 </style>

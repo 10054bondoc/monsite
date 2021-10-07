@@ -1,5 +1,6 @@
 <script>
   import { push, location } from "svelte-spa-router";
+  import { aboutToCloseAboutMe } from "../stores";
   $: curPage = $location.split("/").includes("BLOG") ? "BLOG" : "ABOUT ME";
   const pages = ["ABOUT ME", "BLOG"];
 </script>
@@ -13,10 +14,16 @@
         if (e.target.innerText !== curPage) {
           e.target.style.opacity = 0.9;
         }
+        if (page === "BLOG") {
+          aboutToCloseAboutMe.update((n) => (n = true));
+        }
       }}
       on:mouseleave={(e) => {
         if (e.target.innerText !== curPage) {
           e.target.style.opacity = 0.5;
+        }
+        if (page === "BLOG") {
+          aboutToCloseAboutMe.update((n) => (n = false));
         }
       }}
       on:click={(e) => {
