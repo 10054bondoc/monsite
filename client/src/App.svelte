@@ -15,7 +15,7 @@
 
 <style>
   main {
-    background-color: #fff6ed;
+    background-color: var(--offwhite);
     width: 100vw;
     height: 100vh;
     display: flex;

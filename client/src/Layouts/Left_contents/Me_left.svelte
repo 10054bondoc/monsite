@@ -1,9 +1,8 @@
 <script>
-  import { idHeight, aboutToCloseAboutMe } from "../../stores";
+  import { idHeight, currentCVnav } from "../../stores";
   import { fade, fly } from "svelte/transition";
 
   const navItems = ["WORKS", "SKILLS", "WORK EXPERIENCE", "ETC"];
-  $: currentNavItem = "WORKS";
   $: copyNotCheck = true;
 </script>
 
@@ -86,24 +85,24 @@
       {#each navItems as item}
         <li
           id={item}
-          style="opacity: {currentNavItem === item ? '1' : '.5'};
+          style="opacity: {$currentCVnav === item ? '1' : '.5'};
           "
           on:mouseenter={(e) => {
-            if (currentNavItem !== item) {
+            if ($currentCVnav !== item) {
               e.target.style.opacity = "1";
             }
           }}
           on:mouseleave={(e) => {
-            if (currentNavItem !== item) {
+            if ($currentCVnav !== item) {
               e.target.style.opacity = ".5";
             }
           }}
           on:click={() => {
-            currentNavItem = item;
+            currentCVnav.update((n) => (n = item));
           }}
         >
           {item}
-          {#if currentNavItem === item}
+          {#if $currentCVnav === item}
             <span>
               <ion-icon
                 name="caret-forward-outline"
