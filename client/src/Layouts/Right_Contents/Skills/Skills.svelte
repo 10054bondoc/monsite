@@ -5,8 +5,7 @@
 
   let techIuse = fetchSomething("skills", "?techiuse=true", "GET");
   let otherprofs = fetchSomething("skills", "?techiuse=false", "GET");
-  console.log(techIuse);
-  console.log(otherprofs);
+  // Promise.resolve(techIuse).then((val) => console.log(val));
 </script>
 
 {#await techIuse}
@@ -20,12 +19,12 @@
           <li
             id={result.label}
             on:mouseenter={(e) => {
-              console.dir(e.target);
-              e.target.children[0].style.opacity = ".25";
+              // console.dir(e.target);
+              e.target.children[0].style.opacity = ".15";
               e.target.children[1].style.opacity = "1";
             }}
             on:mouseleave={(e) => {
-              console.dir(e.target);
+              // console.dir(e.target);
               e.target.children[0].style.opacity = "1";
               e.target.children[1].style.opacity = "0";
             }}
@@ -102,13 +101,13 @@
   }
   .label {
     font-weight: 700;
-    opacity: 0.75;
+    opacity: 0.9;
     margin-bottom: 0.5rem;
   }
   .techiuse {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .techlist {
     display: flex;
@@ -129,7 +128,6 @@
     align-items: center;
     margin: 0.5rem;
     position: relative;
-    box-shadow: -2px 2px 2px rgb(58, 58, 58);
     overflow: hidden;
   }
   .techlabel {
