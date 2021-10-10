@@ -34,8 +34,8 @@
       alt="mypic"
       class="pic"
       style="top: {imatblog ? '10%' : '-10%'}; left: {imatblog
-        ? '5%'
-        : '-10%'}; width: {imatblog ? '90%' : '60%'};"
+        ? '10%'
+        : '-10%'}; width: {imatblog ? '80%' : '60%'};"
     />
   </div>
   {#if imatblog}

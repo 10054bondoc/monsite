@@ -5,7 +5,7 @@
 
   onMount(() => {
     idHeight.update((n) => (n = window.innerHeight * 0.42));
-    console.log($idHeight);
+    // console.log($idHeight);
   });
 </script>
 

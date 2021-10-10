@@ -4,7 +4,7 @@
   import Me from "../Right_Contents/Me_right.svelte";
   const routes = {
     "/": Me,
-    "/blog": Blog,
+    "/blog/*": Blog,
   };
   $: bgc = $location.split("/").includes("BLOG") ? "#55596a" : "#e18050";
   $: panelwidth = $location.split("/").includes("BLOG") ? "95%" : "50%";

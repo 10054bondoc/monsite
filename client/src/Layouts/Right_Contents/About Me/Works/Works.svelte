@@ -1,7 +1,7 @@
 <script>
-  import { fetchSomething } from "../../../fetchingCalls";
+  import { fetchSomething } from "../../../../fetchingCalls";
   import { fade } from "svelte/transition";
-  import Loading from "../../../Loading.svelte";
+  import Loading from "../../../../Loading.svelte";
 
   let allWorks = fetchSomething("works", "", "GET");
   console.log(allWorks);

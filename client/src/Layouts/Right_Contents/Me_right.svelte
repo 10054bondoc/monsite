@@ -1,9 +1,9 @@
 <script>
   import { currentCVnav } from "../../stores";
-  import Works from "./Works/Works.svelte";
-  import WorkExperience from "./Work Experience/WorkExperience.svelte";
-  import Skills from "./Skills/Skills.svelte";
-  import Etc from "./Etc/Etc.svelte";
+  import Works from "./About Me/Works/Works.svelte";
+  import WorkExperience from "./About Me/Work Experience/WorkExperience.svelte";
+  import Skills from "./About Me/Skills/Skills.svelte";
+  import Etc from "./About Me/Etc/Etc.svelte";
   const navigator = [
     { text: "WORKS", comp: Works },
     { text: "WORK EXPERIENCE", comp: WorkExperience },

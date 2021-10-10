@@ -1,7 +1,7 @@
 <script>
-  import { fetchSomething } from "../../../fetchingCalls";
-  import Loading from "../../../Loading.svelte";
+  import { fetchSomething } from "../../../../fetchingCalls";
   import { fade } from "svelte/transition";
+  import Loading from "../../../../Loading.svelte";
 
   let techIuse = fetchSomething("skills", "?techiuse=true", "GET");
   let otherprofs = fetchSomething("skills", "?techiuse=false", "GET");

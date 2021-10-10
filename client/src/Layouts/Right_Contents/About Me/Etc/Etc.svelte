@@ -69,7 +69,7 @@
     {/each}
   </div>
   <div class="references">
-    <p class="etclabel">REFERENCES</p>
+    <p class="etclabel">REFERENCES (upon request)</p>
   </div>
 </div>
 
@@ -133,5 +133,7 @@
     font-size: 0.75rem;
   }
   .references {
+    display: flex;
+    flex-direction: column;
   }
 </style>

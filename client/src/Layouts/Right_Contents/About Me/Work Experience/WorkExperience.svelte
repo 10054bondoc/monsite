@@ -1,7 +1,8 @@
 <script>
-  import { fetchSomething } from "../../../fetchingCalls";
+  import { fetchSomething } from "../../../../fetchingCalls";
+  import Loading from "../../../../Loading.svelte";
+
   import { fade, fly } from "svelte/transition";
-  import Loading from "../../../Loading.svelte";
 
   let workexp = fetchSomething("workexperiences", "", "GET");
   $: uniq_mentionedYears = [];
