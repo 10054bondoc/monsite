@@ -58,7 +58,6 @@
                 e.target.children[1].style.opacity = "1";
               }}
               on:mouseleave={(e) => {
-                console.dir(e.target);
                 e.target.children[0].style.opacity = "1";
                 e.target.children[1].style.opacity = "0";
               }}

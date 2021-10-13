@@ -4,7 +4,6 @@
   import Loading from "../../../../Loading.svelte";
 
   let allWorks = fetchSomething("works", "", "GET");
-  console.log(allWorks);
 </script>
 
 {#await allWorks}

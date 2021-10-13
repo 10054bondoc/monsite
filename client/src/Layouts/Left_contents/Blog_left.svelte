@@ -13,24 +13,19 @@
   ];
   $: fromLocal = "";
   onMount(() => {
-    fromLocal = window.localStorage.getItem("page");
+    fromLocal = window.sessionStorage.getItem("page");
+    if (!fromLocal) {
+      fromLocal = "all";
+    }
     currentBlognav.update((n) => (n = fromLocal));
     // console.log(fromLocal);
     push(`/BLOG/${fromLocal}`);
-    // const LocString = $location
-    //   .split(/\/|%20|BLOG/g)
-    //   .filter((n) => n !== "")
-    //   .join(" ");
-    // // console.log("locstring:", LocString);
-    // // console.log("storecat:", $currentBlogCat);
-    // if (LocString === "") {
-    //   currentBlogCat.update((n) => (n = "all"));
-    // } else {
-    //   currentBlogCat.update((n) => (n = LocString));
-    // }
   });
   afterUpdate(() => {
-    fromLocal = window.localStorage.getItem("page");
+    fromLocal = window.sessionStorage.getItem("page");
+    if (!fromLocal) {
+      fromLocal = "all";
+    }
   });
 </script>
 
@@ -55,7 +50,7 @@
       on:click={() => {
         currentBlognav.update((n) => (n = content));
         fromLocal = content;
-        window.localStorage.setItem("page", content);
+        window.sessionStorage.setItem("page", content);
         push(`/BLOG/${content}`);
       }}
     >

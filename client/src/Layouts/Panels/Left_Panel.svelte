@@ -9,8 +9,12 @@
   $: imageDiv = undefined;
   window.addEventListener("resize", () => {
     // console.log(imageDiv.height);
+    // idHeight.update((n) => (n = imageDiv.height));
     if (!imatblog) {
+      console.log("they resize outside  blog");
       idHeight.update((n) => (n = imageDiv.height));
+    } else {
+      idHeight.update((n) => (n = window.innerHeight * 0.42));
     }
   });
   window.addEventListener("load", () => {

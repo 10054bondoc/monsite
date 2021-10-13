@@ -11,14 +11,14 @@
   $: boundingleft = true;
 
   Promise.resolve(workexp).then((val) => {
-    console.log(val);
+    // console.log(val);
     let mentionedYears = [];
     val.forEach((el) => {
       mentionedYears.push(el.year);
     });
     uniq_mentionedYears = [...new Set(mentionedYears)];
     currentYear = uniq_mentionedYears[0];
-    console.log(uniq_mentionedYears);
+    // console.log(uniq_mentionedYears);
   });
 
   const karatClick = (direction) => {

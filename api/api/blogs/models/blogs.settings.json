@@ -1,8 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "bookreviews",
+  "collectionName": "blogs",
   "info": {
-    "name": "bookreview"
+    "name": "blogs",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -11,17 +12,22 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "booktitle": {
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Book_review",
+        "Film_tv_review",
+        "Ragbag"
+      ]
+    },
+    "title": {
       "type": "string"
     },
-    "review": {
+    "content": {
       "type": "richtext"
     },
     "rating": {
       "type": "decimal"
-    },
-    "bookauthor": {
-      "type": "string"
     },
     "cover": {
       "model": "file",

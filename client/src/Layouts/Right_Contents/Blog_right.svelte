@@ -7,7 +7,7 @@
   import Ragbag from "./Blog/Ragbag/Ragbag.svelte";
 
   onMount(() => {
-    console.log("am i ringing");
+    // console.log("am i ringing");
   });
   const navigator = [
     { text: "all", comp: All },
@@ -18,7 +18,7 @@
 
   $: indexOfCurrent = navigator.findIndex((el) => el.text === $currentBlognav);
   $: selectedNavItem = navigator[indexOfCurrent];
-  console.log("selectedNavItem", selectedNavItem);
+  // console.log("selectedNavItem", selectedNavItem);
 </script>
 
 <div class="blog">
