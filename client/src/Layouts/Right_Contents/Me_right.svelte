@@ -22,7 +22,7 @@
   .me {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 80vh;
     color: var(--offwhite);
     font-family: "Roboto", "sans-serif";
     letter-spacing: 0.5px;
@@ -30,7 +30,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    overflow: auto;
   }
 </style>

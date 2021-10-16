@@ -13,9 +13,11 @@
   .lds-ring {
     opacity: 0.75;
     display: inline-block;
-    position: absolute;
+    /* position: absolute; */
     width: 80px;
     height: 80px;
+    justify-self: center;
+    align-self: center;
   }
   .lds-ring div {
     box-sizing: border-box;

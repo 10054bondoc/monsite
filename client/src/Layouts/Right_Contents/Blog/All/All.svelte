@@ -17,15 +17,15 @@
       Hi! <span id="subgreeting">More about me...</span>
     </p>
   </div>
-  {#await allblogs}
-    <Loading />
-  {:then results}
-    <div class="contents">
+  <div class="contents">
+    {#await allblogs}
+      <Loading />
+    {:then results}
       {#each results as result}
         <Entry entrydata={result} />
       {/each}
-    </div>
-  {/await}
+    {/await}
+  </div>
 </div>
 
 <style>
@@ -33,6 +33,8 @@
     width: 100%;
     height: 100%;
     letter-spacing: 0.5px;
+    display: flex;
+    flex-direction: column;
   }
   .allheader {
     width: 100%;
@@ -50,11 +52,12 @@
   }
   .contents {
     width: 100%;
-    height: 80%;
+    height: 100%;
     overflow-y: auto;
 
     display: flex;
     flex-direction: column;
     justify-content: start;
+    align-items: center;
   }
 </style>

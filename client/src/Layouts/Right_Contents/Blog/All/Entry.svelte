@@ -34,7 +34,7 @@
     <div class="titlecat">
       <p class="title">{entrydata.title}</p>
       <p class="category">
-        {entrydata.Category.split("_").join(" ").toUpperCase()} |
+        {entrydata.category.split("_").join(" ").toUpperCase()} |
         <span class="entrydate"
           >{dateFormatted_date}-{dateFormatted_month}-{dateFormatted_year}</span
         >
